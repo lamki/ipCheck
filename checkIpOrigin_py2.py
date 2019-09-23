@@ -47,10 +47,10 @@ def readURL(ip):
     i = 0;
     for x in ip:
 ##    print("https://api.ipgeolocation.io/ipgeo?apiKey=[API_KEY]&ip="+ip[i]+"")
-      link = "https://api.ipgeolocation.io/ipgeo?apiKey=[API_KEY]&ip="+ip[i]+""
-      response = requests.get(link)
-      json_data = json.loads(response.text)
-      print(ip[i]+" - "+json_data['city']+", "+json_data['country_name'])
+        link = "https://api.ipgeolocation.io/ipgeo?apiKey=[API_KEY]&ip="+ip[i]+""
+        response = requests.get(link)
+        json_data = json.loads(response.text)
+        print(ip[i]+" - "+json_data['city']+", "+json_data['country_name'])
         i += 1
 
 def printUniqueIp():
